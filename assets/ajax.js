@@ -1,16 +1,16 @@
 jQuery(document).ready(function ($) {
-	$('#submit_answer').on('click', function (event){
+	$('#hfm-submit').on('click', function (event){
 		event.preventDefault();
-		var number = $('#hfm-number').val();
+		var number = $('#number').val();
 		jQuery.post(
 			hfm_ajax.ajax_url,
 			{
 				'_ajax_nonce': hfm_ajax.hfm_ajax_nonce,
-				'action': 'answer_form_submission',
+				'action': 'answer_form',
 				'number': number,
 			},
 			function( response ){
-				alert('Form submitted');
+				console.log(response.message);
 			}
 		);
 	});

@@ -8,9 +8,7 @@
  * @package         hfm_plugin
  */
 
-define( 'HFM_EXAMPLE_PLUGIN_VERSION', '1.0.0' );
 define( 'HFM_EXAMPLE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define( 'HFM_EXAMPLE_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 
 /**
  * Enqueue JavaScript assets
@@ -75,13 +73,9 @@ add_action( 'wp_ajax_answer_form_submission', 'hfm_answer_form_submission' );
 function hfm_answer_form_submission() {
 	check_ajax_referer( 'hfm_ajax_nonce' );
 	$number = (int) $_POST['number'];
-	if (7 === $number){
-		wp_send_json( array( 'message' => 'Correct! The answer is 7.' ) );
-	}else {
-		wp_send_json( array( 'message' => 'Whoops! Please try again.' ) );
+	if (7 === $number) {
+		wp_send_json(array('message' => 'Correct! The answer is 7.'));
+	} else {
+		wp_send_json(array('message' => 'Whoops! Please try again.'));
 	}
 }
-
-
-
-
