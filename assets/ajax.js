@@ -1,7 +1,8 @@
 jQuery(document).ready(function ($) {
 	$('#hfm-submit').on('click', function (event){
 		event.preventDefault();
-		var number = $('#number').val();
+		var number_input = $('#hfm-number');
+		var number = number_input.val();
 		jQuery.post(
 			hfm_ajax.ajax_url,
 			{

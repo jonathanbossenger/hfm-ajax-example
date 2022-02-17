@@ -19,7 +19,7 @@ function hfm_enqueue_script($hook) {
 		'hfm-ajax',
 		HFM_EXAMPLE_PLUGIN_URL . 'assets/ajax.js',
 		array( 'jquery' ),
-		'1.0.0',
+		time(),
 		true
 	);
 	wp_enqueue_script( 'hfm-ajax' );
