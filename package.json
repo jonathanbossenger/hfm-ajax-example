@@ -1,12 +1,25 @@
-
 {
-  "name": "wcjhb-2019-plugin-workshop",
-  "version": "0.1.0",
-  "main": "Gruntfile.js",
-  "author": "YOUR NAME HERE",
+  "name": "hfm-ajax-example",
+  "version": "1.0.0",
+  "description": "WordPress Plugin example for Debugging PHP and JavaScript article",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanbossenger/hfm-ajax-example.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jonathanbossenger/hfm-ajax-example/issues"
+  },
+  "homepage": "https://github.com/jonathanbossenger/hfm-ajax-example#readme",
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-wp-i18n": "~0.5.0",
-    "grunt-wp-readme-to-markdown": "~1.0.0"
+    "@wordpress/scripts": "21.0.2"
   }
 }
