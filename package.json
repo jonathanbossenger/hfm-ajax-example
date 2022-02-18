@@ -2,12 +2,8 @@
   "name": "hfm-ajax-example",
   "version": "1.0.0",
   "description": "WordPress Plugin example for Debugging PHP and JavaScript article",
-  "main": "index.js",
   "directories": {
     "test": "tests"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -19,7 +15,17 @@
     "url": "https://github.com/jonathanbossenger/hfm-ajax-example/issues"
   },
   "homepage": "https://github.com/jonathanbossenger/hfm-ajax-example#readme",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start"
+  },
   "devDependencies": {
-    "@wordpress/scripts": "21.0.2"
+    "@wordpress/scripts": "^21.0.2"
   }
 }
