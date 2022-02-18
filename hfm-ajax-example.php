@@ -69,7 +69,7 @@ function hfm_ajax_form_shortcode() {
 /**
  * Ajax Hook to delete the form submissions
  */
-add_action( 'wp_ajax_answer_form_submission', 'hfm_answer_form_submission' );
+add_action( 'wp_ajax_nopriv_answer_form_submission', 'hfm_answer_form_submission' );
 function hfm_answer_form_submission() {
 	check_ajax_referer( 'hfm_ajax_nonce' );
 	$number = (int) $_POST['number'];
