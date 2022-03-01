@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 		var number_input = $('#hfm-number');
 		var number = number_input.val();
 		var data = {
-			'_ajax_nonce': hfm_ajax.nonce,
+			'_ajax_nonce': hfm_ajax._ajax_nonce,
 			'action': 'answer_form_submission',
 			'number': number,
 		};
