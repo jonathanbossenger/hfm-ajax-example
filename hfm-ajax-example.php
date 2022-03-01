@@ -76,6 +76,6 @@ function hfm_answer_form_submission() {
 	if (7 === $number) {
 		wp_send_json(array('message' => 'Correct! The answer is 7.'));
 	} else {
-		wp_send_json(array('message' => 'Whoops! Please try again.'));
+		wp_send_json(array('message' => 'Nope! Please try again.'));
 	}
 }

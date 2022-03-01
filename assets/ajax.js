@@ -8,12 +8,16 @@ jQuery(document).ready(function ($) {
 			'action': 'answer_form_submission',
 			'number': number,
 		};
-		$.post(
-			hfm_ajax.ajax_url,
-			data,
-			function( response ){
+		$.ajax({
+			type: "POST",
+			url: hfm_ajax.ajax_url,
+			data: data,
+			success: function(response){
 				alert(response.message);
+			},
+			error: function(XMLHttpRequest, status, error){
+				alert("Oh dear, an error occurred!");
 			}
-		);
+		});
 	});
 });
